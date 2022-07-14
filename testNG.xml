@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression" parallel="classes">
+    <test name="Real Device">
+        <parameter name="runAs" value="grid"></parameter>
+        <parameter name="platform" value="mobile"></parameter>
+        <parameter name="runOn" value="0726325192007644"></parameter>
+        <classes>
+            <class name="testscripts.firstTest"></class>
+        </classes>
+    </test>
+    <!--	<test name="Enmulator">
+        <parameter name="runAs" value="grid"></parameter>
+        <parameter name="platform" value="mobile"></parameter>
+        <parameter name="runOn" value="192.168.56.101:5555"></parameter>
+            <packages>
+                <package name="com.automation.testscripts"></package>
+            </packages>
+        </test>-->
+</suite>
