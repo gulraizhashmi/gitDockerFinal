@@ -82,7 +82,7 @@ public class firstTest {
             MimeBodyPart messageBodyPart2 = new MimeBodyPart();
 
             // Mention the file which you want to send
-            String filename = System.getProperty("user.dir")+"\\pom.xml";
+            String filename = "/home/SeleniumTestFramework/pom.xml";
 
             // Create data source and pass the filename
             DataSource source = new FileDataSource(filename);
