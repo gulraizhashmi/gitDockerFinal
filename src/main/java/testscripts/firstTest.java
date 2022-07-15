@@ -51,7 +51,7 @@ public class firstTest {
 
                     protected PasswordAuthentication getPasswordAuthentication() {
 
-                        return new PasswordAuthentication("muhamadabdulhaseeb@gmail.com", "Iamgreat02");
+                        return new PasswordAuthentication("gulraiz.hashmi@venturedive.com", "wecoeyjseyilabfe");
 
                     }
 
@@ -63,7 +63,7 @@ public class firstTest {
             Message message = new MimeMessage(session);
 
             // Set the from address
-            message.setFrom(new InternetAddress("muhamadabdulhaseeb@gmail.com"));
+            message.setFrom(new InternetAddress("gulraiz.hashmi@venturedive.com"));
 
             // Set the recipient address
             message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("m.abdul.haseeb@venturedive.com"));
