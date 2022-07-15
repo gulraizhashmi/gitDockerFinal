@@ -1,5 +1,4 @@
 FROM openjdk:8-jdk-alpine
-LABEL Miguel Doctor <migueldoctor@gmail.com>
 RUN apk add --no-cache curl tar bash procps
 
 # Downloading and installing Maven
@@ -27,13 +26,12 @@ RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1 \
   \
   && echo "Cleaning and setting links" \
-
+  && rm -f /tmp/apache-maven.tar.gz \
+  && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
 
 # 6- Define environmental variables required by Maven, like Maven_Home directory and where the maven repo is located
 ENV MAVEN_HOME /usr/share/maven
 ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
-
-
 COPY src /home/SeleniumTestFramework/src
 
 COPY pom.xml /home/SeleniumTestFramework
