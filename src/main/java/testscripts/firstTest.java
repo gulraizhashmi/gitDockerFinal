@@ -4,11 +4,11 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
 
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
 import javax.mail.*;
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeBodyPart;
-import javax.mail.internet.MimeMessage;
+import javax.mail.internet.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
@@ -79,31 +79,31 @@ public class firstTest {
             messageBodyPart1.setText("This is message body");
 
             // Create another object to add another content
-           // MimeBodyPart messageBodyPart2 = new MimeBodyPart();
+            MimeBodyPart messageBodyPart2 = new MimeBodyPart();
 
             // Mention the file which you want to send
-           // String filename = "G:\\a.xlsx";
+            String filename = System.getProperty("user.dir")+"\\pom.xml";
 
             // Create data source and pass the filename
-           // DataSource source = new FileDataSource(filename);
+            DataSource source = new FileDataSource(filename);
 
             // set the handler
-            //messageBodyPart2.setDataHandler(new DataHandler(source));
+            messageBodyPart2.setDataHandler(new DataHandler(source));
 
             // set the file
-           // messageBodyPart2.setFileName(filename);
+            messageBodyPart2.setFileName(filename);
 
             // Create object of MimeMultipart class
-           // Multipart multipart = new MimeMultipart();
+            Multipart multipart = new MimeMultipart();
 
             // add body part 1
-           // multipart.addBodyPart(messageBodyPart2);
+            multipart.addBodyPart(messageBodyPart2);
 
             // add body part 2
-           // multipart.addBodyPart(messageBodyPart1);
+            multipart.addBodyPart(messageBodyPart1);
 
             // set the content
-           // message.setContent(multipart);
+            message.setContent(multipart);
 
             // finally send the email
             Transport.send(message);
