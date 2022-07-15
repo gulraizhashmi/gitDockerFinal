@@ -63,7 +63,7 @@ public class firstTest {
             Message message = new MimeMessage(session);
 
             // Set the from address
-            message.setFrom(new InternetAddress("gulraiz.hashmi@venturedive.com"));
+            message.setFrom(new InternetAddress("muhamadabdulhaseeb@gmail.com"));
 
             // Set the recipient address
             message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("m.abdul.haseeb@venturedive.com"));
