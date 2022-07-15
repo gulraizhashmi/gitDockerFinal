@@ -51,7 +51,7 @@ public class firstTest {
 
                     protected PasswordAuthentication getPasswordAuthentication() {
 
-                        return new PasswordAuthentication("gulraiz.hashmi@venturedive.com", "Hashmi@4040");
+                        return new PasswordAuthentication("muhamadabdulhaseeb@gmail.com", "Haseeb@97!");
 
                     }
 
