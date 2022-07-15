@@ -24,6 +24,14 @@ WORKDIR /home
 # Define commonly used JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/default-jvm/
 
+COPY mvn-entrypoint.sh /usr/local/bin/mvn-entrypoint.sh
+COPY settings-docker.xml /usr/share/maven/ref/
+
+RUN chmod 755 /usr/local/bin/mvn-entrypoint.sh
+ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
+CMD ["mvn"]
+
+
 COPY src /home/SeleniumTestFramework/src
 
 COPY pom.xml /home/SeleniumTestFramework
