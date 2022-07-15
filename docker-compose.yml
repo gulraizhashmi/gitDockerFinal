@@ -15,6 +15,7 @@ services:
 
   selenium-hub:
     image: selenium/hub:latest
+    command: tail -F anything
     container_name: selenium-hub
     environment:
       - HUB_HOST=selenium-hub
