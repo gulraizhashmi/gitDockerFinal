@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import javax.mail.*;
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -72,10 +73,10 @@ public class firstTest {
             message.setSubject("Testing Subject");
 
             // Create object to add multimedia type content
-            //BodyPart messageBodyPart1 = new MimeBodyPart();
+            BodyPart messageBodyPart1 = new MimeBodyPart();
 
             // Set the body of email
-           // messageBodyPart1.setText("This is message body");
+            messageBodyPart1.setText("This is message body");
 
             // Create another object to add another content
            // MimeBodyPart messageBodyPart2 = new MimeBodyPart();
