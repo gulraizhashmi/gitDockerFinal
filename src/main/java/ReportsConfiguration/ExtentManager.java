@@ -11,7 +11,7 @@ public class ExtentManager {
     private static String reportFileName="Test-Automation-Report"+".html";
     private static String fileSeparator=System.getProperty("file.separator");
     private static String reportFilepath=System.getProperty("user.dir")+fileSeparator+"TestReport";
-    public static String reportFileLocation=reportFilepath+fileSeparator+reportFileName;
+    private static String reportFileLocation=reportFilepath+fileSeparator+reportFileName;
 
     public static ExtentReports getInstance() {
         if(extent== null)
@@ -21,6 +21,7 @@ public class ExtentManager {
     }
 
     public static ExtentReports createInstance() {
+        System.out.println(reportFileLocation);
         String fileName=getReportPath(reportFilepath);
         ExtentHtmlReporter htmlReporter=new ExtentHtmlReporter(fileName);
         htmlReporter.config().setTheme(Theme.DARK);

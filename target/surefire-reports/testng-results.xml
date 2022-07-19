@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-19T07:09:37Z" name="Regression" finished-at="2022-07-19T07:09:37Z" duration-ms="555">
+  <suite started-at="2022-07-19T07:49:31Z" name="Regression" finished-at="2022-07-19T07:49:31Z" duration-ms="496">
     <groups>
     </groups>
-    <test started-at="2022-07-19T07:09:37Z" name="Real Device" finished-at="2022-07-19T07:09:37Z" duration-ms="555">
+    <test started-at="2022-07-19T07:49:31Z" name="Real Device" finished-at="2022-07-19T07:49:31Z" duration-ms="496">
       <class name="testscripts.firstTest">
-        <test-method signature="testOne()[pri:0, instance:testscripts.firstTest@67c27493]" started-at="2022-07-19T12:09:37Z" name="testOne" finished-at="2022-07-19T12:09:37Z" duration-ms="343" status="FAIL">
+        <test-method signature="testOne()[pri:0, instance:testscripts.firstTest@67c27493]" started-at="2022-07-19T12:49:31Z" name="testOne" finished-at="2022-07-19T12:49:31Z" duration-ms="331" status="FAIL">
           <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
             <message>
               <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
@@ -24,7 +24,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:247)
 	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:129)
 	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:156)
-	at testscripts.firstTest.testOne(firstTest.java:23)
+	at testscripts.firstTest.testOne(firstTest.java:25)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
