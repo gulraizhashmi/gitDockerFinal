@@ -22,7 +22,7 @@ public class firstTest {
     public void testOne() throws MalformedURLException {
         System.out.println(System.getenv("HUB_HOST"));
         DesiredCapabilities dc = DesiredCapabilities.chrome();
-        URL url= new URL("http://localhost:4444/wd/hub");
+        URL url= new URL("http://hello:4444/wd/hub");
         driver = new RemoteWebDriver(url,dc);
         driver.get("http://www.google.com");
         System.out.println("Title of trehe page: "+driver.getTitle());
