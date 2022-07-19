@@ -3,6 +3,7 @@ package testscripts;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
@@ -20,12 +21,14 @@ public class firstTest {
     public static RemoteWebDriver driver;
     @Test
     public void testOne() throws MalformedURLException {
+        SoftAssert softAssert = new SoftAssert();
         System.out.println(System.getenv("HUB_HOST"));
         DesiredCapabilities dc = DesiredCapabilities.chrome();
-        URL url= new URL("http://hello:4444/wd/hub");
+        URL url= new URL("http://localhost:4444/wd/hub");
         driver = new RemoteWebDriver(url,dc);
         driver.get("http://www.google.com");
         System.out.println("Title of trehe page: "+driver.getTitle());
+        softAssert.assertTrue(driver.getTitle().equals("Browserstack"), "First soft assert failed");
         driver.quit();
         //sendMail();
     }

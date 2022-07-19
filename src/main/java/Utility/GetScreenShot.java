@@ -15,9 +15,9 @@ import static ReportsConfiguration.ExtentManager.getReportPath;
 public class GetScreenShot {
     public static String capture(RemoteWebDriver remoteDriver, String screenShotName) throws IOException
     {
-        WebDriver tempdriver=remoteDriver;
-        tempdriver = new Augmenter().augment(remoteDriver);
-        TakesScreenshot ts=((TakesScreenshot)tempdriver);
+        WebDriver tempDriver;
+        tempDriver = new Augmenter().augment(remoteDriver);
+        TakesScreenshot ts=((TakesScreenshot)tempDriver);
         File source = ts.getScreenshotAs(OutputType.FILE);
         getReportPath(System.getProperty("user.dir")+"/TestReport/screenshots/");
         String destinationPath=System.getProperty("user.dir")+"/TestReport/screenshots/"+screenShotName+".png";
