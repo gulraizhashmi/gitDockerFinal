@@ -35,7 +35,7 @@ public class ExtentManager {
         extent.setSystemInfo("AUT", "QA");
         return extent;
     }
-    private static String getReportPath(String path) {
+    public static String getReportPath(String path) {
         File testDirectory = new File(path);
         if(!testDirectory.exists()) {
             if(testDirectory.mkdir()) {
