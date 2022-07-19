@@ -4,17 +4,20 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import org.zeroturnaround.zip.ZipUtil;
 
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
 import javax.mail.*;
 import javax.mail.internet.*;
+import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
 
 import static ReportsConfiguration.ExtentManager.reportFileLocation;
+import static ReportsConfiguration.ExtentManager.reportFilepath;
 
 
 public class firstTest {
@@ -91,7 +94,8 @@ public class firstTest {
             MimeBodyPart messageBodyPart2 = new MimeBodyPart();
 
             // Mention the file which you want to send
-            String filename = reportFileLocation;
+            ZipUtil.pack(new File(reportFilepath), new File(reportFilepath+"/hello.zip"));
+            String filename = reportFilepath+"/hello.zip";
 
             // Create data source and pass the filename
             DataSource source = new FileDataSource(filename);

@@ -37,6 +37,12 @@
             <artifactId>extentreports</artifactId>
             <version>3.0.7</version>
         </dependency>
+        <dependency>
+            <groupId>org.zeroturnaround</groupId>
+            <artifactId>zt-zip</artifactId>
+            <version>1.15</version>
+            <type>jar</type>
+        </dependency>
             </dependencies>
             <build>
                 <pluginManagement>
