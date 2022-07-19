@@ -94,9 +94,9 @@ public class firstTest {
             MimeBodyPart messageBodyPart2 = new MimeBodyPart();
 
             // Mention the file which you want to send
-            ZipUtil.pack(new File(reportFilepath), new File(reportFilepath+"/hello.zip"));
-            String filename = reportFilepath+"/hello.zip";
-
+            //ZipUtil.pack(new File(reportFilepath), new File(reportFilepath+"/hello.zip"));
+            //String filename = reportFilepath+"/hello.zip";
+            String filename = reportFileLocation;
             // Create data source and pass the filename
             DataSource source = new FileDataSource(filename);
 

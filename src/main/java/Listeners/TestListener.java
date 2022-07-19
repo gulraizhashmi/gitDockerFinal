@@ -41,20 +41,21 @@ public class TestListener implements ITestListener {
 
     public void onTestFailure(ITestResult result) {
         //StepsListener.stepsReporting(result);
-        try {
+      /*  try {
             screentshotpath= GetScreenShot.capture(driver, result.getMethod().getMethodName());
         } catch (IOException e) {
             // TODO Auto-generated catch block
 
             e.printStackTrace();
-        }
+        }*/
         System.out.println("*** Test execution " + result.getMethod().getMethodName() + " failed...");
-        try {
-            ExtentTestManager.getTest().log(Status.FAIL, "Test Failed "+ExtentTestManager.getTest().addScreenCaptureFromPath(screentshotpath));
-        } catch (IOException e) {
+   //     try {
+            //ExtentTestManager.getTest().log(Status.FAIL, "Test Failed "+ExtentTestManager.getTest().addScreenCaptureFromPath(screentshotpath));
+            ExtentTestManager.getTest().log(Status.FAIL, "Test Failed ");
+//        } catch (IOException e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+//            e.printStackTrace();
+ //       }
         ExtentTestManager.endTest();
         ExtentManager.getInstance().flush();
     }
