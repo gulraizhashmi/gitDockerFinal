@@ -24,6 +24,7 @@ public class firstTest {
         SoftAssert softAssert = new SoftAssert();
         System.out.println(System.getenv("HUB_HOST"));
         DesiredCapabilities dc = DesiredCapabilities.chrome();
+        dc.setCapability("takesScreenshot", true);
         URL url= new URL("http://localhost:4444/wd/hub");
         driver = new RemoteWebDriver(url,dc);
         driver.get("http://www.google.com");
