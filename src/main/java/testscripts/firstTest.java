@@ -13,6 +13,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
 
+import static ReportsConfiguration.ExtentManager.reportFileLocation;
+
 
 public class firstTest {
     public static RemoteWebDriver driver;
@@ -84,7 +86,7 @@ public class firstTest {
             MimeBodyPart messageBodyPart2 = new MimeBodyPart();
 
             // Mention the file which you want to send
-            String filename = "reportFileLocation";
+            String filename = reportFileLocation;
 
             // Create data source and pass the filename
             DataSource source = new FileDataSource(filename);

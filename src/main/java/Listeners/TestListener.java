@@ -22,7 +22,7 @@ public class TestListener implements ITestListener {
         System.out.println(("*** Test Suite " + context.getName() + " ending ***"));
         ExtentTestManager.endTest();
         ExtentManager.getInstance().flush();
-        //sendMail();
+        sendMail();
     }
 
     public void onTestStart(ITestResult result) {
