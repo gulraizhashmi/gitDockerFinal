@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Regression" parallel="classes">
+    <listeners>
+        <listener class-name="Listeners.TestListener" />
+        <listener class-name="Listeners.ConfigurationListener" />
+    </listeners>
     <test name="Real Device">
         <parameter name="runAs" value="grid"></parameter>
         <parameter name="platform" value="mobile"></parameter>
