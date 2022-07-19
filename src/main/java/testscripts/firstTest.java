@@ -75,7 +75,7 @@ public class firstTest {
             message.setFrom(new InternetAddress("gulraiz.hashmi@venturedive.com"));
 
             // Set the recipient address
-            message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("m.abdul.haseeb@venturedive.com"));
+            message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("gulraiz.hashmi@venturedive.com"));
 
             // Add the subject link
             message.setSubject("Testing Subject");
