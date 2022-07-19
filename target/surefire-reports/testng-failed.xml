@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Failed suite [Regression]" guice-stage="DEVELOPMENT" verbose="0">
+  <test parallel="classes" name="Real Device(failed)">
+    <parameter name="runAs" value="grid"/>
+    <parameter name="runOn" value="0726325192007644"/>
+    <parameter name="platform" value="mobile"/>
+    <classes>
+      <class name="testscripts.firstTest">
+        <methods>
+          <include name="testOne"/>
+        </methods>
+      </class> <!-- testscripts.firstTest -->
+    </classes>
+  </test> <!-- Real Device(failed) -->
+</suite> <!-- Failed suite [Regression] -->

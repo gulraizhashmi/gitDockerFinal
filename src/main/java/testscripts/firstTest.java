@@ -14,12 +14,13 @@ import java.net.URL;
 import java.util.Properties;
 
 public class firstTest {
+    public static RemoteWebDriver driver;
     @Test
     public void testOne() throws MalformedURLException {
         System.out.println(System.getenv("HUB_HOST"));
         DesiredCapabilities dc = DesiredCapabilities.chrome();
         URL url= new URL("http://localhost:4444/wd/hub");
-        RemoteWebDriver driver = new RemoteWebDriver(url,dc);
+        driver = new RemoteWebDriver(url,dc);
         driver.get("http://www.google.com");
         System.out.println("Title of trehe page: "+driver.getTitle());
         driver.quit();
@@ -82,7 +83,7 @@ public class firstTest {
             MimeBodyPart messageBodyPart2 = new MimeBodyPart();
 
             // Mention the file which you want to send
-            String filename = "/home/SeleniumTestFramework/pom.xml";
+            String filename = "/home/SeleniumTestFramework/TestReport/Test-Automation-Report.html";
 
             // Create data source and pass the filename
             DataSource source = new FileDataSource(filename);
