@@ -29,6 +29,7 @@ public class firstTest {
         driver.get("http://www.google.com");
         System.out.println("Title of trehe page: "+driver.getTitle());
         softAssert.assertTrue(driver.getTitle().equals("Browserstack"), "First soft assert failed");
+        softAssert.assertAll();
         driver.quit();
         //sendMail();
     }
